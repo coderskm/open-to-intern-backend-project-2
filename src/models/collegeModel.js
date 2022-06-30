@@ -8,7 +8,7 @@ const collegeSchema = new mongoose.Schema(
       required: true,
       trim: true
     },
-    fullname: {
+    fullName: {
       type: String,
       required: true,
       trim: true
@@ -22,8 +22,7 @@ const collegeSchema = new mongoose.Schema(
       type: Boolean,
       default: false
     },
-  },
-  { timestamps: true }
+  }
 );
 
 module.exports = mongoose.model("College", collegeSchema);
