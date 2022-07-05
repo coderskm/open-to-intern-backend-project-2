@@ -74,9 +74,9 @@ const createCollege = async (req, res) => {
 
 // create interns
 const createInterns = async (req, res) => {
-    try {
         res.setHeader('Access-Control-Allow-Origin','*')
-
+  
+    try {
         let internData = req.body;
         let nameRegex = /^[a-zA-Z ]{2,20}$/;
         let emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
@@ -149,6 +149,8 @@ const createInterns = async (req, res) => {
 
 // get interns details from a particular college
 const getCollegeDetails = async(req, res) => {
+        res.setHeader('Access-Control-Allow-Origin','*')
+  
     try {
         let collegeName = req.query.collegeName;
         if (!collegeName) {
